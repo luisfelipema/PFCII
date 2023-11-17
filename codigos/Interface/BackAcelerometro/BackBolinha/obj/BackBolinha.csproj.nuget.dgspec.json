@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\amara\\Desktop\\PFC\\BackBolinha\\BackBolinha\\BackBolinha.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\amara\\Desktop\\PFC\\BackBolinha\\BackBolinha\\BackBolinha.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\amara\\Desktop\\PFC\\BackBolinha\\BackBolinha\\BackBolinha.csproj",
+        "projectName": "BackBolinha",
+        "projectPath": "C:\\Users\\amara\\Desktop\\PFC\\BackBolinha\\BackBolinha\\BackBolinha.csproj",
+        "packagesPath": "C:\\Users\\amara\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amara\\Desktop\\PFC\\BackBolinha\\BackBolinha\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\amara\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MQTTnet": {
+              "target": "Package",
+              "version": "[4.3.1.873, )"
+            },
+            "MQTTnet.AspNetCore": {
+              "target": "Package",
+              "version": "[4.3.1.873, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

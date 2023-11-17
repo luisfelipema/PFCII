@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfico de Linha em Tempo Real</title>
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Impede a barra de rolagem */
+        }
+        /* Estilos para os botões e input */
+        .custom-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }    
+
+        .stop-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .custom-button-start {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #30d72a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px;
+            
+        }
+
+        select#axle-type {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .error-message {
+            padding: 10px;
+            color: #ff0000;
+            font-size: 14px;
+            margin-top: 5px;
+            display: flex; /* Inicialmente escondida */
+            justify-content: center;
+            text-align: center;
+        }
+
+        .center-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 85vh;
+        }
+
+    </style>    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <!-- Título centralizado "Coleta de Dados" com fonte pequena -->
+    <h1 style="text-align: center; font-size: 25px;">Coleta de Dados</h1>
+
+    <div class="button-container">
+
+        <div>
+            <select id="axle-type">
+                <option value = null >Selecione o Eixo</option>
+                <option value = "1">Eixo x</option>
+                <option value = "2">Eixo y</option>
+                <option value = "3">Eixo z</option>
+            </select>
+        </div>
+
+        <button id="start" class="custom-button-start">Ligar</button>
+        <button id="stop" class="stop-button" style="display:none;">Desligar</button>
+
+        <button id="start-recording" class="custom-button">Iniciar Gravação</button>
+        <button id="stop-recording" class="stop-button" style="display:none;"> Gravando Dados </button>
+
+    </div>
+
+    <div class="error-message" style="width: auto; height: 10px;" id="error-message"></div>
+    
+    <div class="center-div">
+        <canvas id="real-time-chart" width="800" height="300"></canvas>
+    </div>
+
+    <script type="module">
+        const ctx = document.getElementById('real-time-chart').getContext('2d');
+        let isSavingData = false;
+        let labels = [];
+        let sizeRecording= 1024;
+        const amostra = 0.001;
+        var on_off = false;
+        let selectedAxleType = null;
+
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Dados em Tempo Real',
+                    data: [],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                    pointRadius: 0,
+                }]
+            },
+            options: {
+                responsive: true,
+                animation: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                },
+                scales: {
+                    x: {
+                        type: 'linear',
+                    },
+                    y: {
+                        beginAtZero: 250,
+                        suggestedMax: 500,
+                    },
+                },
+            },
+        });
+
+        var recordingData = {
+            labels: [],
+            data: [],
+        };
+
+   
+        const startRecordingButton = document.getElementById('start-recording');
+        const stopRecordingButton = document.getElementById('stop-recording');
+        const axleTypeSelect = document.getElementById('axle-type');
+        const startButton = document.getElementById('start');
+        const stopButton = document.getElementById('stop');
+        const options = {
+            clientId: 'monitor',
+            host: 'localhost',
+            port: 1884,
+            protocol: 'mqtt'
+        };
+        const topics = ['vibration_value'];
+        const client = new Paho.MQTT.Client(options.host,Number(options.port),options.clientId);
+        
+        client.onConnectionLost = onConnectionLost;
+        client.onMessageArrived = onMessageArrived;
+        client.connect({
+            onSuccess: onConnect
+        });
+
+        axleTypeSelect.addEventListener('change', () => {
+            selectedAxleType = axleTypeSelect.value; // Obtém o valor selecionado
+            sendMqtt("axle", selectedAxleType);
+        });
+
+
+        startButton.addEventListener('click', () => {
+
+            if (selectedAxleType == null || selectedAxleType == "null"){
+                showError('SELECIONE UM EIXO');
+                return
+            }
+
+            startButton.style.display = 'none';
+            stopButton.style.display = 'block';
+            on_off = true;
+
+            axleTypeSelect.disabled = true;
+
+            sendMqtt("on_off", "true")
+        });
+
+        stopButton.addEventListener('click', () => {
+            startButton.style.display = 'block';
+            stopButton.style.display = 'none';
+            on_off = false;
+
+            axleTypeSelect.disabled = false;
+
+            sendMqtt("on_off", "false")
+        });
+
+
+        startRecordingButton.addEventListener('click', () => {
+            startRecording();
+        });
+
+        stopRecordingButton.addEventListener('click', () => {
+            stopRecording();
+        });
+
+       
+        function startRecording() {
+            isSavingData = true;
+            startRecordingButton.style.display = 'none';
+            stopRecordingButton.style.display = 'block';
+            verifyTimeRecord();
+        }
+
+        function verifyTimeRecord() {
+            console.log(recordingData.labels.length);
+            if (recordingData.labels.length < sizeRecording) {
+                setTimeout(verifyTimeRecord, 500); // Verifica novamente após 500 milissegundos
+            } else {
+                stopRecording();
+            }
+        }
+
+        function stopRecording() {
+
+            if(recordingData.labels.length > 0){
+                isSavingData = false;
+                startRecordingButton.style.display = 'block';
+                stopRecordingButton.style.display = 'none';
+                saveDataToCSV();
+            }
+        }
+
+        function saveDataToCSV() {
+
+            var csvContent = "dados\n";
+            for (let i = 0; i < sizeRecording; i++) {
+                const line = recordingData.data[i] + "\n";
+                csvContent += line;
+            }
+
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'dados.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            recordingData = {
+                labels: [],
+                data: [],
+            };
+        }
+
+        // const mqttClient = mqtt.connect(mqttConfig);
+
+        function onConnectionLost(responseObject){
+            console.log(responseObject)
+        }
+        function onMessageArrived(message){
+            updateChart(message.payloadString);
+            // console.log("OnMessageArrived: "+ message.payloadString);
+        }
+
+        function onConnect(){
+            console.log("Conectado ao servidor MQTT")
+            
+            for (let i = 0; i < topics.length; i++) {
+                client.subscribe(topics[i]);
+            }
+        }
+
+        function sendMqtt(topic, message) {
+            client.send(topic, message);
+        }
+
+        let tempoAtual = 0; // Variável para manter o tempo atual
+
+        function updateChart(message) {
+            const values = message.split(",");
+            
+            for(let i = 0; i < values.length; i++) {
+
+                if(isSavingData){
+                    recordingData.data.push(values[i]);
+                    recordingData.labels.push(tempoAtual.toFixed(4)); // Adicione o tempo atual como rótulo
+                  
+                }
+                
+                chart.data.datasets[0].data.push(values[i]);
+                labels.push(tempoAtual.toFixed(4)); // Adicione o tempo atual como rótulo
+                tempoAtual += amostra; // Incrementa o tempo atual com o intervalo de amostra
+    
+            }
+
+            chart.update();
+        }
+
+        function showError(message) {
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = message;
+
+            // Esconder a mensagem após 5 segundos (5000 milissegundos)
+            setTimeout(() => {
+                errorMessage.textContent = "";
+            }, 3000); // Tempo em milissegundos
+        }
+    </script>
+</body>
+</html>

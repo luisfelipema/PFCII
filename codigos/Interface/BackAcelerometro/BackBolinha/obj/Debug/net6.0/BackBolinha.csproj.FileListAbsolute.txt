@@ -1,0 +1,87 @@
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.exe
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.deps.json
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.runtimeconfig.json
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.dll
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.pdb
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\bin\Debug\net6.0\MQTTnet.dll
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.AssemblyReference.cache
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfoInputs.cache
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfo.cs
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CoreCompileInputs.cache
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CopyComplete
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.dll
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\refint\BackBolinha.dll
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.pdb
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.genruntimeconfig.cache
+C:\Users\João Victor\RiderProjects\BackBolinha\BackBolinha\obj\Debug\net6.0\ref\BackBolinha.dll
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.exe
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.deps.json
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.runtimeconfig.json
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.dll
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.pdb
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\MQTTnet.dll
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.AssemblyReference.cache
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfoInputs.cache
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfo.cs
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CoreCompileInputs.cache
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CopyComplete
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.dll
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\refint\BackBolinha.dll
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.pdb
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.genruntimeconfig.cache
+C:\Users\João Victor\Desktop\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\ref\BackBolinha.dll
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.exe
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.deps.json
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.runtimeconfig.json
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.dll
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.pdb
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\MQTTnet.dll
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.AssemblyReference.cache
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfoInputs.cache
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfo.cs
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CoreCompileInputs.cache
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CopyComplete
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.dll
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\refint\BackBolinha.dll
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.pdb
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.genruntimeconfig.cache
+C:\Users\Public\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\ref\BackBolinha.dll
+C:\www\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.exe
+C:\www\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.deps.json
+C:\www\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.runtimeconfig.json
+C:\www\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.dll
+C:\www\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.pdb
+C:\www\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\MQTTnet.dll
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.AssemblyReference.cache
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.GeneratedMSBuildEditorConfig.editorconfig
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfoInputs.cache
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfo.cs
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CoreCompileInputs.cache
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CopyComplete
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.dll
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\refint\BackBolinha.dll
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.pdb
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.genruntimeconfig.cache
+C:\www\LabControle\BackBolinha\BackBolinha\obj\Debug\net6.0\ref\BackBolinha.dll
+C:\www\LabControle\BackBolinha\BackBolinha\bin\Debug\net6.0\MQTTnet.AspNetCore.dll
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.exe
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.deps.json
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.runtimeconfig.json
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.dll
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\bin\Debug\net6.0\BackBolinha.pdb
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\bin\Debug\net6.0\MQTTnet.dll
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\bin\Debug\net6.0\MQTTnet.AspNetCore.dll
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.AssemblyReference.cache
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfoInputs.cache
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.AssemblyInfo.cs
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CoreCompileInputs.cache
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.csproj.CopyComplete
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.dll
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\refint\BackBolinha.dll
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.pdb
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\BackBolinha.genruntimeconfig.cache
+C:\Users\amara\Desktop\PFC\BackBolinha\BackBolinha\obj\Debug\net6.0\ref\BackBolinha.dll

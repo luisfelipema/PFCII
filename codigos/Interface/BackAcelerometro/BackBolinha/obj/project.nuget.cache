@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Nfs9wFmagZ2eac1hxtN5JhlsV01XsN2c/mP4CQ/d5YUFBgtWod0dX6B+LY4X0DW+m/dd/V69Gs4LoEiiShd5tA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amara\\Desktop\\PFC\\BackBolinha\\BackBolinha\\BackBolinha.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amara\\.nuget\\packages\\mqttnet\\4.3.1.873\\mqttnet.4.3.1.873.nupkg.sha512",
+    "C:\\Users\\amara\\.nuget\\packages\\mqttnet.aspnetcore\\4.3.1.873\\mqttnet.aspnetcore.4.3.1.873.nupkg.sha512"
+  ],
+  "logs": []
+}
